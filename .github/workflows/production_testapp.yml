@@ -31,7 +31,7 @@ jobs:
           cp -r .next/static deploy/.next/
           cp -r public deploy/
           cd deploy
-          zip -r ../app.zip .
+          zip -r ../app.zip . -x "*.git*" -x "*.github*" -x ".gitignore" -x "*node_modules/.cache*"
           cd ..
 
       - name: List deploy folder before zipping
