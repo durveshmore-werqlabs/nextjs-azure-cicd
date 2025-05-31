@@ -19,7 +19,7 @@ jobs:
           node-version: "18"
 
       - name: Install dependencies
-        run: npm ci
+        run: npm install
 
       - name: Build Next.js app
         run: npm run build
@@ -27,7 +27,9 @@ jobs:
       - name: Zip build folder for deployment
         run: |
           mkdir deploy
-          cp -r .next public node_modules package.json next.config.js deploy/
+          cp -r .next/standalone/* deploy
+          cp -r .next/static deploy/.next
+          cp -r public deploy
           cd deploy
           zip -r ../app.zip .
           cd ..
