@@ -26,7 +26,7 @@ jobs:
 
       - name: Zip build folder for deployment
         run: |
-          mkdir deploy
+          mkdir -p deploy/.next
           cp -r .next/standalone/* deploy/
           cp -r .next/static deploy/.next/
           cp -r public deploy/
