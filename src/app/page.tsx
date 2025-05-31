@@ -23,9 +23,6 @@ export default function Home() {
           <li className="tracking-[-.01em]">
             Save and see your changes instantly.
           </li>
-          <li className="tracking-[-.01em]">
-            This is a CI/CD Pipeline using GitHub and Azure
-          </li>
         </ol>
 
         <div className="flex gap-4 items-center flex-col sm:flex-row">
