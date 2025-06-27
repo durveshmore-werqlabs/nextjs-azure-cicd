@@ -28,6 +28,8 @@ jobs:
           npm run build
           mv ./build/static ./build/standalone/build
           mv ./public ./build/standalone
+        env:
+          NEXT_PUBLIC_APP_NAME: ${{ secrets.NEXT_PUBLIC_APP_NAME }}
 
       - name: "Deploy to Azure Web App"
         id: deploy-to-webapp
